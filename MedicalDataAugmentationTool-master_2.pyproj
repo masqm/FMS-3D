@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ee2bc28c-6e05-4097-b647-047c7902ff29}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>main.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>Global|ContinuumAnalytics|Anaconda37-64</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="clustering.py" />
+    <Compile Include="dataset.py" />
+    <Compile Include="datasets\basic_dataset.py" />
+    <Compile Include="datasets\dataset_base.py" />
+    <Compile Include="datasets\debug_image_dataset.py" />
+    <Compile Include="datasets\graph_dataset.py" />
+    <Compile Include="datasets\pyro_dataset.py" />
+    <Compile Include="datasets\reference_image_transformation_dataset.py" />
+    <Compile Include="datasets\__init__.py" />
+    <Compile Include="datasources\cached_image_datasource.py" />
+    <Compile Include="datasources\datasource_base.py" />
+    <Compile Include="datasources\image_datasource.py" />
+    <Compile Include="datasources\label_datasource.py" />
+    <Compile Include="datasources\landmark_datasource.py" />
+    <Compile Include="datasources\video_frame_list_datasource.py" />
+    <Compile Include="datasources\__init__.py" />
+    <Compile Include="generators\generator_base.py" />
+    <Compile Include="generators\image_generator.py" />
+    <Compile Include="generators\label_generator.py" />
+    <Compile Include="generators\landmark_generator.py" />
+    <Compile Include="generators\transformation_generator_base.py" />
+    <Compile Include="generators\video_frame_list_generator.py" />
+    <Compile Include="generators\__init__.py" />
+    <Compile Include="graph\node.py" />
+    <Compile Include="graph\run_graph.py" />
+    <Compile Include="iterators\id_list_iterator.py" />
+    <Compile Include="iterators\iterator_base.py" />
+    <Compile Include="iterators\video_frame_id_list_iterator.py" />
+    <Compile Include="iterators\__init__.py" />
+    <Compile Include="main.py" />
+    <Compile Include="main_preprocess.py" />
+    <Compile Include="mean_shift_cosine.py" />
+    <Compile Include="network.py" />
+    <Compile Include="server_dataset_loop.py" />
+    <Compile Include="tensorflow_train\data_generator.py" />
+    <Compile Include="tensorflow_train\data_generator_base.py" />
+    <Compile Include="tensorflow_train\data_generator_padding.py" />
+    <Compile Include="tensorflow_train\layers\conv_lstm.py" />
+    <Compile Include="tensorflow_train\layers\initializers.py" />
+    <Compile Include="tensorflow_train\layers\interpolation.py" />
+    <Compile Include="tensorflow_train\layers\layers.py" />
+    <Compile Include="tensorflow_train\layers\normalizers.py" />
+    <Compile Include="tensorflow_train\layers\resize.py" />
+    <Compile Include="tensorflow_train\layers\__init__.py" />
+    <Compile Include="tensorflow_train\losses\instance_segmentation_losses.py" />
+    <Compile Include="tensorflow_train\losses\instance_segmentation_losses_MIA.py" />
+    <Compile Include="tensorflow_train\losses\semantic_segmentation_losses.py" />
+    <Compile Include="tensorflow_train\networks\unet.py" />
+    <Compile Include="tensorflow_train\networks\unet_base.py" />
+    <Compile Include="tensorflow_train\networks\unet_lstm.py" />
+    <Compile Include="tensorflow_train\networks\unet_lstm_dynamic.py" />
+    <Compile Include="tensorflow_train\networks\unet_lstm_dynamic_MIA.py" />
+    <Compile Include="tensorflow_train\networks\__init__.py" />
+    <Compile Include="tensorflow_train\train_loop.py" />
+    <Compile Include="tensorflow_train\utils\data_format.py" />
+    <Compile Include="tensorflow_train\utils\heatmap_image_generator.py" />
+    <Compile Include="tensorflow_train\utils\layer_weight_inspector.py" />
+    <Compile Include="tensorflow_train\utils\loss_aggregator.py" />
+    <Compile Include="tensorflow_train\utils\print_utils.py" />
+    <Compile Include="tensorflow_train\utils\rotation_matrix_builder.py" />
+    <Compile Include="tensorflow_train\utils\summary_handler.py" />
+    <Compile Include="tensorflow_train\utils\tensorflow_util.py" />
+    <Compile Include="tensorflow_train\utils\__init__.py" />
+    <Compile Include="tensorflow_train\__init__.py" />
+    <Compile Include="transformations\intensity\base.py" />
+    <Compile Include="transformations\intensity\np\gamma.py" />
+    <Compile Include="transformations\intensity\np\noise.py" />
+    <Compile Include="transformations\intensity\np\normalize.py" />
+    <Compile Include="transformations\intensity\np\shift_scale_clamp.py" />
+    <Compile Include="transformations\intensity\np\smooth.py" />
+    <Compile Include="transformations\intensity\np\__init__.py" />
+    <Compile Include="transformations\intensity\sitk\normalize.py" />
+    <Compile Include="transformations\intensity\sitk\shift_scale_clamp.py" />
+    <Compile Include="transformations\intensity\sitk\smooth.py" />
+    <Compile Include="transformations\intensity\sitk\__init__.py" />
+    <Compile Include="transformations\intensity\__init__.py" />
+    <Compile Include="transformations\spatial\base.py" />
+    <Compile Include="transformations\spatial\center_line_at_y_axis.py" />
+    <Compile Include="transformations\spatial\common.py" />
+    <Compile Include="transformations\spatial\composite.py" />
+    <Compile Include="transformations\spatial\deformation.py" />
+    <Compile Include="transformations\spatial\flip.py" />
+    <Compile Include="transformations\spatial\landmark.py" />
+    <Compile Include="transformations\spatial\rotation.py" />
+    <Compile Include="transformations\spatial\scale.py" />
+    <Compile Include="transformations\spatial\translation.py" />
+    <Compile Include="transformations\spatial\__init__.py" />
+    <Compile Include="transformations\__init__.py" />
+    <Compile Include="utils\geometry.py" />
+    <Compile Include="utils\image_tiler.py" />
+    <Compile Include="utils\io\common.py" />
+    <Compile Include="utils\io\image.py" />
+    <Compile Include="utils\io\landmark.py" />
+    <Compile Include="utils\io\text.py" />
+    <Compile Include="utils\io\video_frame_list.py" />
+    <Compile Include="utils\io\__init__.py" />
+    <Compile Include="utils\landmark\common.py" />
+    <Compile Include="utils\landmark\heatmap_image_generator.py" />
+    <Compile Include="utils\landmark\heatmap_test.py" />
+    <Compile Include="utils\landmark\landmark_statistics.py" />
+    <Compile Include="utils\landmark\spine_postprocessing.py" />
+    <Compile Include="utils\landmark\transform.py" />
+    <Compile Include="utils\landmark\__init__.py" />
+    <Compile Include="utils\np_image.py" />
+    <Compile Include="utils\random.py" />
+    <Compile Include="utils\segmentation\instance_segmentation_test.py" />
+    <Compile Include="utils\segmentation\metrics.py" />
+    <Compile Include="utils\segmentation\segmentation_statistics.py" />
+    <Compile Include="utils\segmentation\segmentation_test.py" />
+    <Compile Include="utils\sitk_image.py" />
+    <Compile Include="utils\sitk_np.py" />
+    <Compile Include="utils\timer.py" />
+    <Compile Include="utils\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="datasets" />
+    <Folder Include="datasources" />
+    <Folder Include="generators" />
+    <Folder Include="graph" />
+    <Folder Include="iterators" />
+    <Folder Include="tensorflow_train" />
+    <Folder Include="tensorflow_train\layers" />
+    <Folder Include="tensorflow_train\losses" />
+    <Folder Include="tensorflow_train\networks" />
+    <Folder Include="tensorflow_train\utils" />
+    <Folder Include="transformations" />
+    <Folder Include="transformations\intensity" />
+    <Folder Include="transformations\intensity\np" />
+    <Folder Include="transformations\intensity\sitk" />
+    <Folder Include="transformations\spatial" />
+    <Folder Include="utils" />
+    <Folder Include="utils\io" />
+    <Folder Include="utils\landmark" />
+    <Folder Include="utils\segmentation" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|ContinuumAnalytics|Anaconda37-64" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
